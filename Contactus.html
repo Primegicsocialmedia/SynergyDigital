@@ -1,0 +1,84 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Your Company</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar">
+        <div class="navbar-container">
+          <a href="#" class="navbar-logo">
+            <img src="./files/Logo.jpg" width="160px" height="170px" />
+          </a>
+          <ul class="navbar-menu" id="navbarMenu">
+            <li><a href="./index.html" class="navbar-link">Home</a></li>
+            <li><a href="./Aboutus.html" class="navbar-link">About us</a></li>
+            <li><a href="#services" class="navbar-link">Services</a></li>
+            <li><a href="./Contactus.html" class="navbar-link">Contact</a></li>
+          </ul>
+          <div class="navbar-toggle" id="navbarToggle">
+            <span class="navbar-toggle-bar"></span>
+            <span class="navbar-toggle-bar"></span>
+            <span class="navbar-toggle-bar"></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section class="contact-us">
+        <div class="content">
+          <h1>Contact Us</h1>
+          <p>
+            If you have any questions or need further information, please fill
+            out the form below. We will get back to you as soon as possible.
+          </p>
+          <form action="#" method="post" class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="surname">Surname</label>
+              <input type="text" id="surname" name="surname" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="cellnumber">Cell Number</label>
+              <input type="tel" id="cellnumber" name="cellnumber" required />
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://youtube.com" target="_blank" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            <div class="footer-links">
+                <a href="./Contactus.html" class="contact-link">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+  
+
+    <script src="script.js"></script>
+  </body>
+</html>
