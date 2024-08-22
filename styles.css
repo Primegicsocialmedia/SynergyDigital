@@ -2,7 +2,7 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden; /* Prevent horizontal scroll */
+  
   font-family: Arial, sans-serif;
 }
 
@@ -15,7 +15,7 @@ body, html {
   padding: 10px 20px;
   display: flex;
   justify-content: center;
-  z-index: 1000; /* Ensure it stays above the content */
+  z-index: 5; /* Ensure it stays above the content */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: adds shadow for better separation */
 }
 
@@ -125,76 +125,84 @@ body, html {
   }
 }
 
-.hero {
-  margin-top: 160px;
-  position: relative;
-  height: 100vh; /* Full viewport height */
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-  z-index: 1;
+
+
+main {
+  margin-top: 150px;
 }
 
-.hero-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+/* Section 1: Background Video */
+.hero-section {
+  
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Cover the entire section */
-  transform: translate(-50%, -50%);
-  z-index: -1; /* Place video behind the overlay */
+  height: 100%; /* Full height for the video */
+  overflow: hidden;
 }
 
-.hero-overlay {
-  position: absolute;
+.background-video {
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
-  z-index: 1; /* Place overlay above the video but below the text */
+  height: 20%;
+  object-fit: cover;
+  z-index: 1;
 }
 
-.hero-content {
+.overlay-content {
   position: relative;
+  z-index: 2;
+  color: #fff;
   text-align: center;
-  color: white;
-  padding: 20px;
-  max-width: 80%;
-  z-index: 1; /* Keep text on top of the overlay */
-
+  padding-top: 20%;
+  background: rgba(0, 0, 0, 0.4); 
 }
 
-.hero-content h1 {
-  font-size: 3em;
-  margin: 0;
+/* Section 2: Header and Text */
+.text-section {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
 }
 
-.hero-content p {
-  font-size: 1.5em;
-  margin: 10px 0 0;
+.text-section h2 {
+  margin-bottom: 20px;
 }
 
-/* Responsive Design */
+.text-section p {
+  line-height: 1.6;
+}
+
+/* Section 3: Additional Content */
+.additional-section {
+  padding: 50px 20px;
+  background-color: #e0e0e0;
+  text-align: center;
+}
+
+.additional-section h2 {
+  margin-bottom: 20px;
+}
+
+.additional-section p {
+  line-height: 1.6;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .navbar-logo {
-      font-size: 1.2em;
+  .overlay-content {
+      padding-top: 40%;
   }
 
-  .navbar-link {
-      font-size: 0.9em;
+  .text-section, .additional-section {
+      padding: 30px 15px;
   }
 
-  .hero-content h1 {
-      font-size: 2em;
+  .text-section h2, .additional-section h2 {
+      font-size: 24px;
   }
 
-  .hero-content p {
-      font-size: 1em;
+  .text-section p, .additional-section p {
+      font-size: 16px;
   }
 }
-
-
